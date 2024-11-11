@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecc-back-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: ecc-back
+  template:
+    metadata:
+      labels:
+        app: ecc-back
+    spec:
+      containers:
+        - name: ecc-back-container
+          image: everfelps/ecc-back:latest  # Image reference
+          ports:
+            - containerPort: 5000

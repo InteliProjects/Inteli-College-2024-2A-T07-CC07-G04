@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-backend-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: go-backend
+  template:
+    metadata:
+      labels:
+        app: go-backend
+    spec:
+      containers:
+        - name: go-backend
+          image: jpsilva1/go-backend:latest  # Image reference
+          ports:
+            - containerPort: 5000

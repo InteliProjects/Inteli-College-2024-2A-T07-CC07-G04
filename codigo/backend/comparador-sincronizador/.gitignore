@@ -1,0 +1,10 @@
+# Ambientes Virtuais
+venv/
+env/
+
+# Arquivos de Configuração
+.env
+
+# Arquivos Compilados
+__pycache__/
+*.py[cod]

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ecc-back-deployment
+spec:
+  selector:
+    app: ecc-back
+  ports:
+  - port: 5004
+    targetPort: 5000
+  type: LoadBalancer
